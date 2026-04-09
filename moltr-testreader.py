@@ -2,6 +2,7 @@ from tabulate import tabulate
 import pandas as pd
 import os
 import sys
+import numpy as np
 
 
 def stringify(x: list) -> str:
@@ -89,6 +90,16 @@ df = pd.read_pickle('./data/minute_full_station_merged.pkl')
 # print all the unique values for each column of the dataframe
 for col in df.columns:
     print(col, ' - ', pd.unique(df[col]), end='\n\n')
+
+# print the unique values for FULL column
+#unique_full_names = pd.unique(df['FULL'])
+#with open('polna_imena_stevcev.txt', 'w', encoding='utf-8') as f:
+#    for name in unique_full_names:
+#        f.write(name + '\n')
+#print(unique_full_names)
+
+# for counter 1042-225
+print(np.average([int(x) for x in df.loc[df['STM'] == '1042-225']['VAVG']]))
 
 #times_unique = set()
 #for t in df['Time']:
