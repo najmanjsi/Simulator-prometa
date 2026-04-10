@@ -89,3 +89,12 @@ TODO
 change the 'moved from' counters to have the location of the time of recording!
 standardize the entries, document the whole thing - so, definitely go through the entire thing again
 make json, better than csv - standard attributes!
+
+this is what I would do: have these attributes:
+ID (xxxx) - just the four numbers, the following three should be under 'versions' or something similar
+versions (xxx) - the last three numbers (and then under each version could be the time of recording)
+location (lat., long.) - the coordinates of the counter at the time of the recording - maybe this could be under versions
+something for old/new versions
+misc/comment - anything left to say
+
+find out the deal with 'uncertain's! and then remove it
