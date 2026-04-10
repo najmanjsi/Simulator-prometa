@@ -19,7 +19,7 @@ def csv_to_pickle(filepath: str, outputpath: str = None):
 
     # if the output path is not specified, set it to './data/filename.pkl'
     if outputpath is None:
-        outputpath = './data/' + filepath.split('/')[-1].split('.')[0]
+        outputpath = './data/' + filepath.split('/')[-1].split('.')[0] + '.pkl'
 
     # totally unnecessary stuff for the progress 'bar'
     filesize = os.path.getsize(filepath)
@@ -87,29 +87,6 @@ df = pd.read_pickle('./data/minute_full_station_merged.pkl')
 #print(df.head(100))
 #print(df_agg.head(100))
 
-# print all the unique values for each column of the dataframe
-for col in df.columns:
-    print(col, ' - ', pd.unique(df[col]), end='\n\n')
 
-# print the unique values for FULL column
-#unique_full_names = pd.unique(df['FULL'])
-#with open('polna_imena_stevcev.txt', 'w', encoding='utf-8') as f:
-#    for name in unique_full_names:
-#        f.write(name + '\n')
-#print(unique_full_names)
-
-# for counter 1042-225
-print(np.average([int(x) for x in df.loc[df['STM'] == '1042-225']['VAVG']]))
-
-#times_unique = set()
-#for t in df['Time']:
-#    times_unique.add(t[:4])
-
-#print(times_unique)
-
-#for i in range(5):
-#    element = df.iloc[i]
-#    acc = sum(int(element[x]) for x in ['Mot', 'Osebni', 'BUS', 'LTov', 'STov', 'TTov', 'TSP', 'Vlac'])
-#    print(f'seštevek (od Mot do Vlac): {acc}, OCC: {element['OCC']}, GAP: {element['GAP']}')
 
 
