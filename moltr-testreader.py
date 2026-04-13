@@ -88,4 +88,35 @@ df = pd.read_pickle('./data/minute_full_station_merged.pkl')
 #print(df_agg.head(100))
 
 
+# uncertain counters (usually of the pattern xxxx-xx(a|0|6))
+# 1005-23(a|0)
 
+def counter_working_months(counter_id: str) -> str:
+    result = ''
+
+    years_months = list({t[:7] for t in df.loc[df['STM'] == counter_id]['Time']})
+    years_months.sort()
+
+    prev = ''
+    for date in years_months:
+        y, m = date.split('-')
+        if prev != y:
+            result += f'\n{y}: {m}'
+            #print(f'\n{y}: {m}', end='')
+        else:
+            result += f', {m}'
+            #print(f', {m}', end='')
+        prev = y
+    result += '\n'
+    #print('\n\n------------------------------------------', end='')
+    return result
+
+#counter_working_months('1005-23a')
+#counter_working_months('1005-230') - is empty
+
+# števci na spodnjem delu Celovške ceste (Ruska - Tivolska) - 1027, 1028
+# rabimo per-hour-rate
+celovska_podvoz_severno = df.loc['1028' in df['STM']].iloc[:10]
+#celovska_podvoz_juzno = df.loc['1027' in df['STM']]
+
+print(celovska_podvoz_severno)

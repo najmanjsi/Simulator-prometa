@@ -1,0 +1,13 @@
+<configuration>
+
+    <input>
+        <net-file value="network_test1.net.xml"/>
+        <route-files value="demand_test2.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+</configuration>
