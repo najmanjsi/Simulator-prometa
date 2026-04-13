@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-04-13T14:33:03.725106+01:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-04-13T17:56:48.433316+01:00 by Eclipse SUMO netedit 1.26.0
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <!-- Routes -->
-    <route id="r_0" edges="1184476405"/>
-    <route id="r_1" edges="1184476405 530977023"/>
-    <!-- Vehicles, persons and containers (sorted by depart) -->
-    <flow id="f_0" begin="0.00" end="3600.00" perHour="1800.00" route="r_1"/>
+    <route id="r_0" edges="1184476405 530977023"/>
 </routes>
