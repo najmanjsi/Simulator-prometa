@@ -1,0 +1,257 @@
+[
+    {
+        "id": "fcd-segments_4",
+        "type": "line",
+        "metadata": { "gid": "group.prometsi.fcd" },
+        "source": "fcd",
+        "source-layer": "segments_4",
+        "filter": ["all", [">", "c", -2]],
+        "layout": { "line-cap": "square", "line-join": "bevel" },
+        "paint": {
+            "line-opacity": 1,
+            "line-color": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "get",
+                    "c"
+                ],
+                0,
+                "#008E30",
+                59,
+                "#008E30",
+                60,
+                "#F49E00",
+                250,
+                "#E2001A",
+                500,
+                "#9E0F00"
+            ],
+            "line-width": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                10,
+                0,
+                10.5,
+                2,
+                13,
+                2.75,
+                14,
+                3.5
+            ],
+            "line-offset": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                10,
+                1.5,
+                10.5,
+                2.5,
+                12.5,
+                3.5
+            ]
+        }
+    },
+    {
+        "id": "fcd-segments_3",
+        "type": "line",
+        "metadata": { "gid": "group.prometsi.fcd" },
+        "source": "fcd",
+        "source-layer": "segments_3",
+        "filter": ["all", [">", "c", -2]],
+        "layout": { "line-cap": "square", "line-join": "bevel" },
+        "paint": {
+            "line-opacity": 1,
+            "line-color": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "get",
+                    "c"
+                ],
+                0,
+                "#008E30",
+                59,
+                "#008E30",
+                60,
+                "#F49E00",
+                250,
+                "#E2001A",
+                500,
+                "#9E0F00"
+            ],
+            "line-width": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                8.9,
+                0,
+                9,
+                0.3,
+                11,
+                1.65,
+                12,
+                2.5,
+                13,
+                3.5
+            ],
+            "line-offset": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                11,
+                1.5,
+                12,
+                2,
+                13,
+                2.5
+            ]
+        }
+    },
+    {
+        "id": "fcd-segments_2",
+        "type": "line",
+        "metadata": { "gid": "group.prometsi.fcd" },
+        "source": "fcd",
+        "source-layer": "segments_2",
+        "filter": ["all", [">", "c", -2]],
+        "layout": { "line-cap": "square", "line-join": "bevel" },
+        "paint": {
+            "line-opacity": 1,
+            "line-color": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "get",
+                    "c"
+                ],
+                0,
+                "#008E30",
+                59,
+                "#008E30",
+                60,
+                "#F49E00",
+                250,
+                "#E2001A",
+                500,
+                "#9E0F00"
+            ],
+            "line-width": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                6.9,
+                0,
+                7,
+                0.3,
+                10,
+                1.25,
+                11,
+                1.65,
+                12,
+                2.5,
+                13,
+                3.5
+            ],
+            "line-offset": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                10,
+                1,
+                11,
+                1.5,
+                12,
+                2,
+                13,
+                2.5
+            ]
+        }
+    },
+    {
+        "id": "fcd-segments_1",
+        "type": "line",
+        "metadata": { "gid": "group.prometsi.fcd" },
+        "source": "fcd",
+        "source-layer": "segments_1",
+        "minzoom": 0,
+        "filter": ["all", [">", "c", -2]],
+        "layout": { "line-cap": "square", "line-join": "bevel" },
+        "paint": {
+            "line-opacity": 1,
+            "line-color": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "get",
+                    "c"
+                ],
+                0,
+                "#008E30",
+                59,
+                "#008E30",
+                60,
+                "#F49E00",
+                250,
+                "#E2001A",
+                500,
+                "#9E0F00"
+            ],
+            "line-width": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                5.5,
+                0,
+                7,
+                1.5,
+                10,
+                3.5,
+                13,
+                8
+            ],
+            "line-offset": [
+                "interpolate", [
+                    "linear"
+                ],
+                [
+                    "zoom"
+                ],
+                6.5,
+                0,
+                7,
+                0.5,
+                10,
+                3,
+                13,
+                4.5
+            ]
+        }
+    }
+]
