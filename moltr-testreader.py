@@ -75,9 +75,9 @@ def csv_to_pickle(filepath: str, outputpath: str = None):
 #df_small = df.iloc[:2_000_000].copy()
 #df_small.to_pickle('./data/mfsm_2mio_lines.pkl')
 
-print('reading dataset ... ', end='', flush=True)
-df = pd.read_pickle('./data/minute_full_station_merged.pkl')
-print('finished', flush=True)
+#print('reading dataset ... ', end='', flush=True)
+#df = pd.read_pickle('./data/minute_full_station_merged.pkl')
+#print('finished', flush=True)
 
 # attribute names: 'STM', 'DIR', 'Err', 'Mot', 'Osebni', 'BUS', 'LTov', 'STov', 'TTov', 'TSP', 'Vlac', 'OCC', 'GAP', 'VMIN', 'VAVG', 'VMAX', 'Time', 'FULL', 'NAME', 'SRC\n'
 
@@ -121,8 +121,8 @@ def counter_working_months(counter_id: str) -> str:
 #celovska_podvoz_severno = df.loc[df['STM'] == '1028-180']
 #celovska_podvoz_severno.to_pickle('./data/celovska_podvoz_severno.pkl')
 
-celovska_podvoz_juzno = df.loc[df['STM'] == '1027-166']
-celovska_podvoz_juzno.to_pickle('./data/celovska_podvoz_juzno.pkl')
+#celovska_podvoz_juzno = df.loc[df['STM'] == '1027-166']
+#celovska_podvoz_juzno.to_pickle('./data/celovska_podvoz_juzno.pkl')
 
 celovska_podvoz_severno = pd.read_pickle('./data/celovska_podvoz_severno.pkl')
 celovska_podvoz_juzno = pd.read_pickle('./data/celovska_podvoz_severno.pkl')
@@ -134,3 +134,7 @@ per_h_rate_severno = per_15_rate_severno * 4
 print(celovska_podvoz_severno.iloc[30:40])
 print(per_15_rate_severno)
 print(per_h_rate_severno)
+
+
+
+# 
