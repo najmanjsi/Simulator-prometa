@@ -1,6 +1,8 @@
 # code for extracting only the counters within the input bounding box (4 coordinate pairs)
 
 DEFAULT_BBOX = (14.49620, 14.50963, 46.05045, 46.06111)
+COUNTERS_FULL_NAME_FILEPATH = 'polna_imena_stevcev.txt'
+COUNTERS_LOCATION_FILEPATH = 'lokacije_stevcev.txt'
 
 
 def is_in_bounding_box(bbox: tuple[float], coords: tuple) -> bool:
@@ -20,7 +22,7 @@ def is_in_bounding_box(bbox: tuple[float], coords: tuple) -> bool:
     return False
 
 
-def counters_in_bounding_box(counter_locations_path: str = 'lokacije_stevcev.txt', bbox: tuple = DEFAULT_BBOX, is_Slovenia = True) -> list:
+def counters_in_bounding_box(counter_locations_path: str = COUNTERS_LOCATION_FILEPATH, bbox: tuple = DEFAULT_BBOX, is_Slovenia = True) -> list:
     '''
     Returns a list of counter IDs (and their coordinates) that are located within the bounding box limits.
     Beware! Coordinates are sometimes (for example in Google Maps) represented by y, x (lat, long) instead of x, y (long, lat). This function automatically corrects this only for Slovenia.
@@ -55,7 +57,7 @@ def counters_in_bounding_box(counter_locations_path: str = 'lokacije_stevcev.txt
     return counters_in
 
 
-def counter_id2name(counter_id: str, id_name_path: str = 'polna_imena_stevcev.txt') -> str:
+def counter_id2name(counter_id: str, id_name_path: str = COUNTERS_FULL_NAME_FILEPATH) -> str:
     '''
     Maps counter's ID to its descriptive name
     '''
