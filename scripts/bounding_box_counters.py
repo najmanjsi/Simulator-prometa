@@ -1,8 +1,10 @@
 # code for extracting only the counters within the input bounding box (4 coordinate pairs)
 
 DEFAULT_BBOX = (14.49620, 14.50963, 46.05045, 46.06111)
-COUNTERS_FULL_NAME_FILEPATH = 'polna_imena_stevcev.txt'
-COUNTERS_LOCATION_FILEPATH = 'lokacije_stevcev.txt'
+COUNTERS_FULL_NAME_FILEPATH = '../metadata/polna_imena_stevcev.txt'
+COUNTERS_LOCATION_FILEPATH = '../metadata/lokacije_stevcev.txt'
+
+OUTPUT_FILE_PATH = '../simulations/small_tests/test2/stevci_ids_test2.txt'
 
 
 def is_in_bounding_box(bbox: tuple[float], coords: tuple) -> bool:
@@ -79,3 +81,13 @@ counter_subset = counters_in_bounding_box()
 for c_id, y, x in counter_subset:
     c_name = counter_id2name(c_id)
     print(f'{c_id}: {c_name if c_name else 'could not find counter id'}, ({y}, {x})')
+
+
+# optional: save the counters to file
+def write_counters_to_file(counters: list, file: str):
+    with open(file, 'w', encoding='utf-8') as f:
+        for c_id, y, x in counters:
+            f.write(f'{c_id.strip()}, {y}, {x}\n')
+
+
+write_counters_to_file(counter_subset, OUTPUT_FILE_PATH)
