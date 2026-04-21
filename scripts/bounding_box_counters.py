@@ -81,6 +81,7 @@ counter_subset = counters_in_bounding_box()
 for c_id, y, x in counter_subset:
     c_name = counter_id2name(c_id)
     print(f'{c_id}: {c_name if c_name else 'could not find counter id'}, ({y}, {x})')
+print(f'Število števcev na območju: {len(counter_subset)}')
 
 
 # optional: save the counters to file
@@ -90,4 +91,4 @@ def write_counters_to_file(counters: list, file: str):
             f.write(f'{c_id.strip()}, {y}, {x}\n')
 
 
-write_counters_to_file(counter_subset, OUTPUT_FILE_PATH)
+#write_counters_to_file(counter_subset, OUTPUT_FILE_PATH)

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-04-21T14:42:19.708227+01:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-04-21T10:52:30.933705+01:00 by Eclipse SUMO netedit 1.26.0
 -->
 
 <data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/datamode_file.xsd">
     <interval id="1027" begin="0.00" end="900.00">
-        <edge id="-983127894#0" entered="300"/>
-    </interval>
-    <interval id="1028" begin="0.00" end="900.00">
-        <edge id="1184476405" entered="211"/>
+        <edge id="-983127894#0"/>
     </interval>
 </data>
