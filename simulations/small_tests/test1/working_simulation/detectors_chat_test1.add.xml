@@ -1,0 +1,27 @@
+<additional>
+
+    <inductionLoop id="counter_south_0"
+                   lane="-983127894#0_0"
+                   pos="15"
+                   freq="900"
+                   file="detector_chat_test1_output.xml"/>
+    
+    <inductionLoop id="counter_south_1"
+                   lane="-983127894#0_1"
+                   pos="15"
+                   freq="900"
+                   file="detector_chat_test1_output.xml"/>
+
+    <inductionLoop id="counter_north_0"
+                   lane="1184476405_0"
+                   pos="15"
+                   freq="900"
+                   file="detector_chat_test1_output.xml"/>
+    
+    <inductionLoop id="counter_north_1"
+                   lane="1184476405_1"
+                   pos="15"
+                   freq="900"
+                   file="detector_chat_test1_output.xml"/>
+
+</additional>

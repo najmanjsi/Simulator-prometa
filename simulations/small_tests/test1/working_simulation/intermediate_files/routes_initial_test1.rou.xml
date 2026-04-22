@@ -1,36 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-04-22 16:53:36.094156 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
-<configuration>
-    <net-file value=".\network_corr1.net.xml"/>
-    <output-trip-file value="trips_test2.xml"/>
-    <fringe-factor value="100"/>
-</configuration>
--->
-
-<!-- generated on 2026-04-22T16:53:35.954544+01:00 by Eclipse SUMO duarouter 1.26.0
+<!-- generated on 2026-04-22T16:55:00.191450+01:00 by Eclipse SUMO duarouter 1.26.0
 <duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
 
     <input>
         <net-file value=".\network_corr1.net.xml"/>
-        <route-files value="trips_test2.xml"/>
+        <route-files value=".\trips_test2.xml"/>
     </input>
 
     <output>
-        <output-file value="routes.rou.xml"/>
-        <alternatives-output value="NUL"/>
+        <output-file value="routes_initial_test1.rou.xml"/>
     </output>
-
-    <time>
-        <begin value="0"/>
-        <end value="3600"/>
-    </time>
-
-    <report>
-        <no-warnings value="true"/>
-        <ignore-errors value="true"/>
-        <no-step-log value="true"/>
-    </report>
 
 </duarouterConfiguration>
 -->

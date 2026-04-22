@@ -1,0 +1,7 @@
+<configuration>
+    <input>
+        <net-file value="network_corr1.net.xml"/>
+        <route-files value="routes_final_test1.rou.xml"/>
+        <additional-files value="detectors_chat_test1.add.xml"/>
+    </input>
+</configuration>
