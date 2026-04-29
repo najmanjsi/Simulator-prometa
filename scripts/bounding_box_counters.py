@@ -132,4 +132,14 @@ def write_counters_to_file(counters: list, file: str):
             f.write(f'{c_id.strip()}, {y}, {x}, {direction}\n')
 
 
+def write_counters_to_file_for_mapDetector(counters: list, file: str):
+    with open(file, 'w', encoding='utf-8') as f:
+
+        f.write('id;lat;lon\n')
+
+        for c_id, y, x in counters:
+            f.write(f'{c_id.strip()};{y};{x}\n')
+
+
 #write_counters_to_file(counters_with_location_and_direction, OUTPUT_FILE_PATH)
+write_counters_to_file_for_mapDetector(counter_subset, '../simulations/small_tests/test2/stevci_ids_test2_for_mapDetector.csv')

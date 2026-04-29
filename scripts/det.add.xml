@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-04-29 19:25:44.347390 by Eclipse SUMO mapDetectorsCopy.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="..\simulations\small_tests\test2\network_with_netconvert_options.net.xml"/>
+    <detector-file value="..\simulations\small_tests\test2\stevci_ids_test2_for_mapDetector.csv"/>
+    <output-file value="det.add.xml"/>
+    <max-radius value="100.0"/>
+    <verbose value="True"/>
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <inductionLoop id="1028-18a" lane="1184476405_0" pos="25.32" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1002-17a" lane="368284687_1" pos="38.99" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1027-166" lane="-983127894#2_0" pos="38.18" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1002-170" lane="368284687_1" pos="38.99" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1935-230" lane="149728625#0_0" pos="68.98" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1935-238" lane="149728625#0_0" pos="68.98" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1028-180" lane="1184476405_0" pos="25.32" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1056-186" lane="149731565#0_0" pos="48.15" file="detector.out.xml" freq="3600"/>
+    <inductionLoop id="1055-166" lane="-1020668978_1" pos="36.98" file="detector.out.xml" freq="3600"/>
+</additional>
