@@ -30,4 +30,4 @@ def generate_edgedata_file(counter_edges: list, counter_data: list, intervals: i
 
 
 
-generate_edgedata_file(['1000', '2000'], ['200', '150'], 3)
+generate_edgedata_file(['1000', '2000'], ['200', '150'], 1)

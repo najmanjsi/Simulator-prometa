@@ -1,0 +1,6 @@
+<configuration>
+    <input>
+        <net-file value="network_with_netconvert_options_corrected.net.xml"/>
+        <route-files value="routes_final.rou.xml"/>
+    </input>
+</configuration>

@@ -2,6 +2,7 @@ from sumolib.net import readNet
 from sumolib.geomhelper import polygonOffsetWithMinimumDistanceToPoint
 import argparse
 import math
+from sumo_files_generator import generate_edgedata_file
 
 
 #parser = argparse.ArgumentParser('loc2edge')
@@ -12,10 +13,10 @@ import math
 
 
 ONE_ROAD_NETWORK_FILE_PATH = '../simulations/small_tests/test1/working_simulation/network_corr1.net.xml'
-SIMPLE_NETWORK_FILE_PATH = '../simulations/small_tests/test2/network_with_netconvert_options.net.xml'
+SIMPLE_NETWORK_FILE_PATH = '../simulations/small_tests/test2/reduced_net_test1/network_with_netconvert_options_corrected.net.xml'
 COUNTERS_FOR_SIMPLE_NETWORK_FILE_PATH = '../simulations/small_tests/test2/stevci_ids_test2.txt'
 
-OFF_MAP_COUNTER_IDS = ['1035', '1036']
+OFF_MAP_COUNTER_IDS = [] #['1035', '1036']
 
 #1027-166; 46.05939214417067, 14.498475690591329; - south - -983127894#0
 #1028-18a; 46.057741464928675, 14.50035510918963; - north - 1184476405
@@ -112,6 +113,8 @@ counter_edges = {}
 
 # additional two: '1035-136', '1036-11a/6'
 
+edges_for_counters = []
+
 with open(COUNTERS_FOR_SIMPLE_NETWORK_FILE_PATH, encoding='utf-8') as f:
     net = readNet(SIMPLE_NETWORK_FILE_PATH)
 
@@ -138,4 +141,9 @@ with open(COUNTERS_FOR_SIMPLE_NETWORK_FILE_PATH, encoding='utf-8') as f:
             eid = edge.getID()
             elen = edge.getLength()
         
+        edges_for_counters.append(eid)
+
         print(f'{eid}, offset = {round(offset)}m / {round(elen)}m (counter lat, lon: {lat}, {lon})')
+
+
+generate_edgedata_file(edges_for_counters, ['200', '200', '200', '200', '200', '200'], 1)
