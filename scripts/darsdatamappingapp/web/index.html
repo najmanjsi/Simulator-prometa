@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Segment Debug Viewer</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <style>
+
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        #controls {
+
+            position: absolute;
+
+            top: 10px;
+            left: 10px;
+
+            z-index: 1000;
+
+            background: white;
+
+            padding: 10px;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 2px 10px rgba(0,0,0,0.3);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="controls">
+
+        <input id="edgeSearch" placeholder="Filter edges..." />
+        
+        <select id="edgeSelect" multiple size="8" style="width: 120px;"></select>
+
+        <br>
+
+        <button id="showBtn">
+            Show
+        </button>
+
+        <button id="showAllBtn">
+            Show All
+        </button>
+
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/parquet-wasm@0.6.1/esm/parquet_wasm.js" type="module"></script>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data id="counts">
+  <interval begin="0" end="900">
+    <edge id="368284687" entered="6" />
+    <edge id="-983127894#2" entered="10" />
+    <edge id="1184476405" entered="11" />
+    <edge id="974486546" entered="10" />
+    <edge id="149728625#0" entered="10" />
+    <edge id="-1020668978" entered="8" />
+    <edge id="149731565#0" entered="2" />
+  </interval>
+  <interval begin="900" end="1800">
+    <edge id="368284687" entered="10" />
+    <edge id="-983127894#2" entered="5" />
+    <edge id="1184476405" entered="6" />
+    <edge id="974486546" entered="5" />
+    <edge id="149728625#0" entered="10" />
+    <edge id="-1020668978" entered="4" />
+    <edge id="149731565#0" entered="3" />
+  </interval>
+  <interval begin="1800" end="2700">
+    <edge id="368284687" entered="4" />
+    <edge id="-983127894#2" entered="12" />
+    <edge id="1184476405" entered="13" />
+    <edge id="974486546" entered="13" />
+    <edge id="149728625#0" entered="20" />
+    <edge id="-1020668978" entered="4" />
+    <edge id="149731565#0" entered="9" />
+  </interval>
+  <interval begin="2700" end="3600">
+    <edge id="368284687" entered="12" />
+    <edge id="-983127894#2" entered="22" />
+    <edge id="1184476405" entered="19" />
+    <edge id="974486546" entered="19" />
+    <edge id="149728625#0" entered="21" />
+    <edge id="-1020668978" entered="6" />
+    <edge id="149731565#0" entered="6" />
+  </interval>
+</data>

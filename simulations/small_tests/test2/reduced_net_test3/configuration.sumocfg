@@ -2,6 +2,5 @@
     <input>
         <net-file value="network_with_netconvert_options_corrected.net.xml"/>
         <route-files value="routes_final.rou.xml"/>
-        <additional-files value="detectors.add.xml"/>
     </input>
 </configuration>

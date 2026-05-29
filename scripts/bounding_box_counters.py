@@ -1,11 +1,13 @@
 # code for extracting only the counters within the input bounding box (4 coordinate pairs)
 
 DEFAULT_BBOX = (14.49620, 14.50963, 46.05045, 46.06302)
+ANOTHER_BOX = (14.49637, 14.50809, 46.05021, 46.06055)
+ANOTHER_BOX2 = (14.49637, 14.50809, 46.05021, 46.06555)
 
 COUNTERS_FULL_NAME_FILEPATH = '../metadata/polna_imena_stevcev.txt'
 COUNTERS_LOCATION_FILEPATH = '../metadata/lokacije_stevcev.txt'
 
-OUTPUT_FILE_PATH = '../simulations/small_tests/test2/stevci_ids_test2.txt'
+OUTPUT_FILE_PATH = '../simulations/small_tests/test2/reduced_net_test3/stevci_table.csv' #'../simulations/small_tests/test2/stevci_ids_test2.txt'
 
 
 def is_in_bounding_box(bbox: tuple[float], coords: tuple) -> bool:
@@ -106,7 +108,7 @@ def counter_id2direction(counter_id: str, id_name_path: str = COUNTERS_FULL_NAME
 
 # let's find the counters we want
 
-counter_subset = counters_in_bounding_box()
+counter_subset = counters_in_bounding_box(bbox=ANOTHER_BOX2)
 
 counters_with_location_and_direction = []
 for cid, y, x in counter_subset:
@@ -121,15 +123,16 @@ for c_id, y, x in counter_subset:
     #print(f'{c_id}: {c_direction if c_direction else 'could not find counter lane direction'}, ({y}, {x})')
 print(f'Število števcev na območju: {len(counter_subset)}')
 
+print([c[0] for c in counter_subset])
 
 # optional: save the counters to file
 def write_counters_to_file(counters: list, file: str):
     with open(file, 'w', encoding='utf-8') as f:
 
-        f.write('counter_id, lat, lon, direction\n')
+        f.write('counter_id,lat,lon,direction\n')
 
         for c_id, y, x, direction in counters:
-            f.write(f'{c_id.strip()}, {y}, {x}, {direction}\n')
+            f.write(f'{c_id.strip()},{y},{x},{direction}\n')
 
 
 def write_counters_to_file_for_mapDetector(counters: list, file: str):
@@ -141,5 +144,5 @@ def write_counters_to_file_for_mapDetector(counters: list, file: str):
             f.write(f'{c_id.strip()};{y};{x}\n')
 
 
-#write_counters_to_file(counters_with_location_and_direction, OUTPUT_FILE_PATH)
-write_counters_to_file_for_mapDetector(counter_subset, '../simulations/small_tests/test2/stevci_ids_test2_for_mapDetector.csv')
+write_counters_to_file(counters_with_location_and_direction, OUTPUT_FILE_PATH)
+#write_counters_to_file_for_mapDetector(counter_subset, '../simulations/small_tests/test2/stevci_ids_test2_for_mapDetector.csv')

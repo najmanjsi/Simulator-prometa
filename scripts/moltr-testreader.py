@@ -124,16 +124,18 @@ def counter_working_months(counter_id: str) -> str:
 #celovska_podvoz_juzno = df.loc[df['STM'] == '1027-166']
 #celovska_podvoz_juzno.to_pickle('./data/celovska_podvoz_juzno.pkl')
 
-celovska_podvoz_severno = pd.read_pickle('./data/celovska_podvoz_severno.pkl')
-celovska_podvoz_juzno = pd.read_pickle('./data/celovska_podvoz_severno.pkl')
+#celovska_podvoz_severno = pd.read_pickle('./data/celovska_podvoz_severno.pkl')
+#celovska_podvoz_juzno = pd.read_pickle('./data/celovska_podvoz_severno.pkl')
 
 # let's calculate hourly rate (we'll just do it with 15min rate and then multiply by 4)
-per_15_rate_severno = np.average([int(s) for s in celovska_podvoz_severno['Osebni']])
-per_h_rate_severno = per_15_rate_severno * 4
+#per_15_rate_severno = np.average([int(s) for s in celovska_podvoz_severno['Osebni']])
+#per_h_rate_severno = per_15_rate_severno * 4
 
-print(celovska_podvoz_severno.iloc[30:40])
-print(per_15_rate_severno)
-print(per_h_rate_severno)
+#print(celovska_podvoz_severno.iloc[30:40])
+#print(per_15_rate_severno)
+#print(per_h_rate_severno)
+
+
 
 
 
